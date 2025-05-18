@@ -1,0 +1,242 @@
+/* Base Header Styles */
+.header-container {
+    background: rgba(40, 54, 24, 0.1); /* #283618 with 95% opacity */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(40, 54, 24, 0.98);
+    backdrop-filter: blur(8px);
+  }
+  .header-content {
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+  }
+  
+  /* Logo Section */
+  .logo-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .header-logo {
+    height: 40px;
+    width: auto;
+  }
+  
+  .logo-text {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #FEFAE0; /* Cream color */
+  }
+  
+  /* Loading State */
+  .header-loading {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 2rem;
+    background: rgba(57, 69, 47, 0.95); /* #39452F with 95% opacity */
+  }
+  
+  .loading-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #DDA15E; /* Light orange */
+    animation: pulse 2s infinite;
+  }
+  
+  .loading-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .loading-line {
+    height: 1rem;
+    background: #BC6C25; /* Dark orange */
+    border-radius: 4px;
+    animation: pulse 2s infinite;
+  }
+  
+  .loading-line.name {
+    width: 120px;
+  }
+  
+  .loading-line.email {
+    width: 160px;
+    height: 0.75rem;
+  }
+  
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+  }
+  
+  /* Desktop User Section */
+  .user-section {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  
+  .user-profile {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #DDA15E;
+  }
+  
+  .user-info {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .user-name {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0;
+    color: #FEFAE0;
+  }
+  
+  .user-email {
+    font-size: 0.875rem;
+    color: #DDA15E;
+    margin: 0;
+  }
+  
+  .logout-button {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: #BC6C25;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  
+  .logout-button:hover {
+    background: #DDA15E;
+  }
+  
+  .logout-icon {
+    width: 20px;
+    height: 20px;
+    color: #FEFAE0;
+  }
+  
+  .logout-text {
+    color: #FEFAE0;
+    font-weight: 500;
+  }
+  
+  /* Mobile Menu */
+  .mobile-menu {
+    display: none;
+    position: relative;
+  }
+  
+  .mobile-menu-button {
+    padding: 0.5rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+  
+  .menu-icon {
+    width: 32px;
+    height: 32px;
+    color: #FEFAE0;
+  }
+  
+  .mobile-menu-dropdown {
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background: rgba(40, 54, 24, 0.98); /* Dark green with transparency */
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    min-width: 240px;
+    z-index: 10;
+    backdrop-filter: blur(8px);
+  }
+  
+  .mobile-user-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .mobile-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #DDA15E;
+  }
+  
+  .mobile-user-name {
+    font-weight: 600;
+    margin: 0;
+    color: #FEFAE0;
+  }
+  
+  .mobile-user-email {
+    font-size: 0.875rem;
+    color: #DDA15E;
+    margin: 0;
+  }
+  
+  .mobile-logout-button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem;
+    background: #BC6C25;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  
+  .mobile-logout-button:hover {
+    background: #DDA15E;
+  }
+  
+  .mobile-logout-icon {
+    width: 20px;
+    height: 20px;
+    color: #FEFAE0;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .header-content {
+      padding: 1rem;
+    }
+    
+    .user-section {
+      display: none;
+    }
+  
+    .mobile-menu {
+      display: block;
+    }
+  }

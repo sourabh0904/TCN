@@ -1,0 +1,111 @@
+/* Full Screen Layout */
+.dashboard-container {
+    background: #fff9e3;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    color: #4a3f35;
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.dashboard-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1.5rem;
+    flex-grow: 1;
+    padding: 1.5rem;
+    height: calc(100vh - 80px); /* Adjust based on header height */
+    overflow-y: auto;
+}
+
+.full-screen-section {
+    background: #fff3e0;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    height: 65vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.grid-section {
+    background: #fff3e0;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    height: calc(35vh - 2rem); /* Adjust based on gap */
+    margin-top: 1rem;
+}
+
+/* Chart Container */
+.chart-container {
+    flex-grow: 1;
+    min-height: 300px;
+    position: relative;
+}
+
+/* Alert Section */
+.alert-section {
+    height: 55vh;
+    overflow-y: auto;
+}
+
+.activity-section {
+    height: calc(45vh - 2rem);
+    overflow-y: auto;
+}
+
+.wrapper {
+    padding: "30px";
+    background-color: "#f5f6fa";
+    min-height: "100vh";
+  }
+  .header {
+    font-size: "28px";
+    margin-bottom: "24px";
+    color: "#2c3e50";
+  }
+  grid {
+    display: "flex";
+    flex-wrap: "wrap";
+    gap: "20px";
+  }
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .dashboard-content {
+        grid-template-columns: 1fr;
+        height: auto;
+    }
+    
+    .full-screen-section,
+    .grid-section {
+        height: auto;
+        min-height: 400px;
+    }
+    
+    .sidebar-column {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .dashboard-content {
+        padding: 1rem;
+        gap: 1rem;
+    }
+    
+    .full-screen-section,
+    .grid-section {
+        padding: 1rem;
+    }
+    
+    .sidebar-column {
+        grid-template-columns: 1fr;
+    }
+}
