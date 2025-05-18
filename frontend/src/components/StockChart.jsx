@@ -19,6 +19,7 @@ ChartJS.register(
   Tooltip,
   Legend
 );
+import "../styles/StockChart.css";
 
 const StockChart = ({ title, stockData }) => {
   const options = {
@@ -46,6 +47,5 @@ const StockChart = ({ title, stockData }) => {
     </div>
   );
 };
-
 
 export default StockChart;

@@ -19,6 +19,7 @@ import RecentActivity from "../components/RecentActivity";
 import QuickActions from "../components/QuickActions";
 import { Loader, Placeholder } from "rsuite";
 import Header from "../components/Header";
+import "../styles/Dashboard.css";
 
 ChartJS.register(CategoryScale, LinearScale, BarElement);
 
