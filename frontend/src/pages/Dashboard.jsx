@@ -20,6 +20,7 @@ import QuickActions from "../components/QuickActions";
 import { Loader, Placeholder } from "rsuite";
 import Header from "../components/Header";
 import "../styles/Dashboard.css";
+import CustomCard from "../components/CustomCard";
 
 ChartJS.register(CategoryScale, LinearScale, BarElement);
 
@@ -125,6 +126,7 @@ function Dashboard() {
               ))}
             </div>
           </div>
+          <CustomCard />
 
           <div className="grid-section">
             <QuickActions />
